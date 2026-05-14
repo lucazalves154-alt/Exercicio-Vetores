@@ -1,0 +1,200 @@
+# Exercicio-Vetores
+
+//ALUNO : LUCAS ALVES CORDEIRO 
+//Exercicio 1
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] numeros = new int[10];
+
+        // loop para leitura dos 10 números
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o numero " + (i + 1) + ": ");
+            numeros[i] = entrada.nextInt();
+        }
+
+        // loop para imprimir os 10 números
+        for (int i = 0; i < 10; i++) {
+            System.out.println("numero: " + (i + 1) + " = " + numeros[i]);
+        }
+
+        entrada.close();
+    }
+}
+//Exercicio 2 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] numeros = new int[10];
+
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Digite o numero " + (i + 1) + ": ");
+            numeros[i] = entrada.nextInt();
+        }
+
+        // (a) imprimir os elementos pares
+        System.out.println("\nNúmeros pares:");
+        for (int i = 0; i < 10; i++) {
+            if (numeros[i] % 2 == 0) {
+                System.out.println(numeros[i]);
+            }
+        }
+        
+        System.out.println("\nNúmeros ímpares:");
+        for (int i = 0; i < 10; i++) {
+            if (numeros[i] % 2 != 0) {
+                System.out.println(numeros[i]);
+            }
+        }
+
+        entrada.close();
+    }
+}
+//Exercicio 3
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        String[] nomes = new String[5];
+
+        // leitura dos 5 nomes
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o nome " + (i + 1) + ": ");
+            nomes[i] = entrada.nextLine();
+        }
+
+        // (a) imprimir do último para o primeiro
+        System.out.println("\n(a) Nomes do último para o primeiro:");
+        for (int i = 4; i >= 0; i--) {
+            System.out.println(nomes[i]);
+        }
+
+        System.out.println("\n(b) Primeiro e último nome:");
+        System.out.println("Primeiro: " + nomes[0]);
+        System.out.println("Último: "   + nomes[4]);
+
+        entrada.close();
+    }
+}
+//Exercicio 4
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] A = new int[5];
+        int[] B = new int[5];
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o elemento " + (i + 1) + ": ");
+            A[i] = entrada.nextInt();
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            B[i] = A[i] * 3;
+        }
+
+        System.out.println("\nElementos do vetor B:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("B[" + i + "] = " + B[i]);
+        }
+
+        entrada.close();
+    }
+}
+//Exercicio 5
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] A = new int[5];
+        int[] B = new int[5];
+        int[] C = new int[5];
+
+        System.out.println("Digite os 5 elementos do vetor A:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = entrada.nextInt();
+        }
+
+        System.out.println("\nDigite os 5 elementos do vetor B:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("B[" + i + "]: ");
+            B[i] = entrada.nextInt();
+        }
+
+        for (int i = 0; i < 5; i++) {
+            C[i] = A[i] - B[i];
+        }
+        
+        System.out.println("\nElementos do vetor C (A - B):");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("C[" + i + "] = " + C[i]);
+        }
+
+        entrada.close();
+    }
+}
+//Exercicio 6
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] A = new int[4];
+        int[] B = new int[6];
+        int[] C = new int[10];
+
+        // leitura do vetor A
+        System.out.println("Digite os 4 elementos do vetor A:");
+        for (int i = 0; i < 4; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = entrada.nextInt();
+        }
+
+        // leitura do vetor B
+        System.out.println("\nDigite os 6 elementos do vetor B:");
+        for (int i = 0; i < 6; i++) {
+            System.out.print("B[" + i + "]: ");
+            B[i] = entrada.nextInt();
+        }
+
+        // colocar os elementos de A no vetor C
+        for (int i = 0; i < 4; i++) {
+            C[i] = A[i];
+        }
+
+        // colocar os elementos de B no vetor C, após os de A
+        for (int i = 0; i < 6; i++) {
+            C[4 + i] = B[i];
+        }
+
+        // mostrar o vetor C
+        System.out.println("\nElementos do vetor C (A + B):");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("C[" + i + "] = " + C[i] + "  ");
+        }
+
+        entrada.close();
+    }
+}
